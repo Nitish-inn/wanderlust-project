@@ -1,0 +1,64 @@
+
+<% layout("/layouts/boilerplate") %>
+<div class="row">
+    <div class="col-8 offset-2">
+
+        <h1>Edit Your Listing</h1>
+
+        <div class="mb-3">
+            <img src="<%= listing.image.url %>"
+                 alt="listing image"
+                 width="300"
+                 height="200" />
+        </div>
+
+        <form method="POST" action="/listings/<%= listing._id %>?_method=PUT" enctype="multipart/form-data">
+
+            <div class="mb-3">Title
+                <input name="listing[title]"
+                       value="<%= listing.title %>"
+                       type="text"
+                       class="form-control" />
+            </div>
+
+            <div class="mb-3">Description
+                <textarea name="listing[description]"
+                          class="form-control"><%= listing.description %></textarea>
+            </div>
+            
+            <div class="mb-3">
+                <label for="image" class="form-label">upload new image</label>
+                <input name="listing[image]"
+                       type="file"
+                       class="form-control"/>
+            </div>
+
+            <div class="mb-3">Price
+                <input 
+                       name="listing[price]"
+                       value="<%= listing.price %>"
+                       type="number"
+                       class="form-control" />
+            </div>
+
+            <div class="mb-3">country
+                <input name="listing[country]"
+                       value="<%= listing.country %>"
+                       type="text"
+                       class="form-control" />
+            </div>
+
+            <div class="mb-3">Location
+                <input name="listing[location]"
+                       value="<%= listing.location %>"
+                       type="text"
+                       class="form-control" />
+            </div>
+
+            <button class="btn btn-dark">Edit</button>
+
+        </form>
+
+    </div>
+</div>
+```
