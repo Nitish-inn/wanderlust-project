@@ -2,7 +2,6 @@
   "engines": {
     "node": "22.22.3"
   },
-
   "name": "project",
   "version": "1.0.0",
   "description": "",
@@ -26,7 +25,7 @@
     "express-session": "^1.19.0",
     "joi": "^18.2.1",
     "method-override": "^3.0.0",
-    "mongodb": "3.7",
+    "mongodb": "^4.17.2",
     "mongoose": "^9.4.1",
     "multer": "^2.1.1",
     "multer-storage-cloudinary": "^4.0.0",
